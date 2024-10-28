@@ -1,0 +1,90 @@
+@use '../base/theme'
+
+.WPTTreeView
+  margin-top: 24px
+  user-select: none
+
+  .wpt-breadcrumbs
+    display: flex
+    gap: 8px
+
+  .item-count
+    color: #888
+    font-size: 12px
+
+  table.directory-listing
+    width: 100%
+    border-collapse: collapse
+
+    a
+      text-decoration: none
+      color: inherit
+
+    thead th
+      padding: 8px
+
+    .expanded td
+      background: #fff2
+
+    tr td
+      cursor: pointer
+      box-shadow: 0 -1px 0 #fff1
+
+    tr:hover + tr td
+      box-shadow: none
+
+    tr:not(.expanded):hover td
+      background: #fff1
+
+    .completion .Progress
+      width: 100%
+      justify-content: flex-end
+      padding: 0 8px
+      padding-left: 0
+
+    .result
+      display: flex
+      justify-content: flex-end
+      align-items: center
+      font-family: monospace
+      position: relative
+      font-size: 12px
+      padding-right: 8px
+      white-space: pre-wrap
+
+      .Progress
+        margin-right: auto
+
+      .Icon
+        width: 16px
+        height: 16px
+
+    .statuses
+      display: flex
+      align-items: center
+
+      .Progress
+        margin-right: auto
+
+      .status
+        display: flex
+        align-items: center
+        gap: 4px
+        font-family: monospace
+        font-size: 12px
+        justify-content: center
+        padding: 8px
+
+      .status .Icon
+        width: 16px
+        height: 16px
+
+    .path
+      padding: 8px
+      display: flex
+      align-items: center
+      gap: 4px
+
+      .Icon
+        width: 16px
+        height: 16px

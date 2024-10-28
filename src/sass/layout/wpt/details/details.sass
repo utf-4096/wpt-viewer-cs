@@ -1,0 +1,90 @@
+.TestDetails
+  margin-top: 15px
+  padding-top: 16px
+  border-top: 1px solid #fff1
+  width: 100%
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  gap: 8px
+
+  .overview
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    width: 100%
+
+    > *
+      display: flex
+      width: 100%
+
+  .subtest-listing
+    margin-top: 8px
+    width: 100%
+
+    > .title
+      display: flex
+      align-items: center
+      justify-content: space-between
+
+    .filters
+      justify-content: flex-end
+
+  .subtest-listing table
+    border-collapse: collapse
+    width: 100%
+    margin-top: 8px
+
+    border: 1px solid #fff1
+
+    &:not(.has-message)
+      border-top: 0
+
+    th
+      background: #fff1
+
+    td, th
+      padding: 8px
+
+    td
+      user-select: text
+
+    .subtest
+      box-shadow: 0 -1px 0 #fff1
+
+      .Icon
+        color: hsl(var(--hue), calc(50% * var(--saturation)), 50%)
+
+      .message
+        font-family: monospace
+        font-size: 12px
+        white-space: pre-wrap
+
+      .status
+        width: 1%
+
+      &.pass > td:first-child .Icon
+        color: hsl(110, 70%, 60%)
+
+      &.fail > td:first-child .Icon
+        color: hsl(0, 70%, 60%)
+
+      .Icon
+        width: 16px
+        height: 16px
+
+  .Throbber
+    margin: 16px auto
+
+  > .message
+    width: 100%
+
+    pre
+      user-select: text
+      margin-top: 8px
+      border: 1px solid #fff2
+      padding: 8px
+      overflow-x: auto
+
+      display: flex
+      width: 100%

@@ -1,0 +1,42 @@
+@use 'sass:color'
+
+.Badge
+  padding: 4px 8px
+  background: hsl(var(--hue), calc(80% * var(--saturation)), 15%)
+
+  &.not-clickable
+    border: none
+    background: none
+
+    .Icon
+      color: hsl(var(--hue), calc(50% * var(--saturation)), 50%)
+    // border-color: #0000
+
+  &:not(.not-clickable)
+    &:not([disabled]):not(:active):hover
+      border-color: #0000
+      background: hsl(var(--hue), calc(60% * var(--saturation)), 30%) !important
+
+    &:not(.active)
+      opacity: 40%
+      box-shadow: none
+
+.badges
+  display: flex
+  align-items: center
+  justify-content: space-between
+  flex-wrap: wrap
+  gap: 8px
+
+.badgeset
+  display: flex
+
+  .Badge:not(:last-child)
+    border-top-right-radius: 0
+    border-bottom-right-radius: 0
+    border-right: 0
+
+  .Badge:not(:first-child)
+    border-top-left-radius: 0
+    border-bottom-left-radius: 0
+    border-left: 0

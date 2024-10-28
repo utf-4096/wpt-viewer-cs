@@ -1,0 +1,36 @@
+@use 'sass:color'
+@use '../base/theme'
+
+.Button
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  overflow: hidden
+  background: #fff2
+  user-select: none
+  padding: 4px
+  gap: 4px
+
+  border: 1px solid #fff2
+  border-radius: 4px
+
+  .with-text
+    padding: 4px 8px
+
+  .Icon
+    width: 16px
+    height: 16px
+
+  &[disabled]
+    cursor: not-allowed
+    opacity: 50%
+
+  &:not([disabled]):not(.not-clickable)
+    box-shadow: theme.$elevated
+
+    &:not(:active):hover
+      border-color: #0000
+      background: #fff4
+
+    &:not(.no-push):active
+      transform: translateY(2px)

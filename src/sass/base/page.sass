@@ -1,0 +1,25 @@
+@use 'theme'
+
+body
+  background: theme.$background
+  color: theme.$foreground
+  font-family: Cantarell, sans-serif
+  font-size: 15px
+
+#app
+  max-width: 1180px
+  padding: 16px
+  width: 100%
+  margin: 0 auto
+
+  header, main
+    display: flex
+
+  header
+    align-items: center
+    justify-content: space-between
+    margin-bottom: 16px
+
+  main
+    flex-direction: column
+
